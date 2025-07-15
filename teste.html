@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma's Store</title>
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Luma's Store 🛒</h1>
+        <p>Os melhores produtos para quem ama esportes</p>
+        <div class="user-actions">
+            <span id="welcomeMessage" style="display: none;"></span>
+            <a href="#" id="loginLink" class="action-btn">Login</a>
+            <a href="#" id="registerLink" class="action-btn">Cadastre-se</a>
+            <a href="#" id="logoutLink" class="action-btn" style="display: none;">Sair</a>
+            <a href="#" id="cartLink" class="action-btn"><i class="fas fa-shopping-cart"></i> Carrinho (<span id="cartCount">0</span>)</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <div class="container">
+        <h2>Produtos em destaque</h2>
+
+        <div class="produto" data-id="1" data-name="Tênis Asics Gel Rocket 10" data-price="399.90">
+            <img src="tenis.jpg" alt="Tênis Asics Gel Rocket 10">
+            <h3>Tênis Asics Gel Rocket 10</h3>
+            <p>Conforto e aderência para quadras de vôlei.</p>
+            <strong>R$ 399,90</strong>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto" data-id="2" data-name="Joelheira Mizuno Vôlei Pro" data-price="129.99">
+            <img src="joelheira.jpg" alt="Joelheira Mizuno Vôlei Pro">
+            <h3>Joelheira Mizuno Vôlei Pro</h3>
+            <p>Proteção reforçada para treinos e jogos intensos.</p>
+            <strong>R$ 129,99</strong>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto" data-id="3" data-name="Bola Mikasa V200W Oficial" data-price="349.00">
+            <img src="bola.jpg" alt="Bola Mikasa V200W Oficial">
+            <h3>Bola Mikasa V200W Oficial</h3>
+            <p>Usada nas Olimpíadas e campeonatos profissionais.</p>
+            <strong>R$ 349,00</strong>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <div id="cartSection" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Seu Carrinho</h2>
+            <ul id="cartItems">
+                </ul>
+            <p>Total: R$ <span id="cartTotal">0.00</span></p>
+            <button id="closeCart" class="btn-close">Fechar</button>
+            <button id="checkoutBtn" class="btn-primary">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="loginSection" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Senha:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            <p id="loginMessage" class="message"></p>
+            <button id="closeLogin" class="btn-close">Fechar</button>
+        </div>
+    </div>
+
+    <div id="registerSection" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Cadastro</h2>
+            <form id="registerForm">
+                <label for="registerName">Nome:</label>
+                <input type="text" id="registerName" required>
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" required>
+                <label for="registerPassword">Senha:</label>
+                <input type="password" id="registerPassword" required>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+            <p id="registerMessage" class="message"></p>
+            <button id="closeRegister" class="btn-close">Fechar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Luma's Store • Instagram: @Luma'sStore</p>
+    </footer>
+
+    <script src="teste.js"></script>
+</body>
+</html>
